@@ -1,0 +1,112 @@
+body {
+  background-color: #E2E7EC;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+      "nav"
+      "banner"
+      "cards";
+}
+
+.nav {
+grid-area: nav;
+background-color: #fffcf3;
+display: flex;
+flex-wrap: nowrap;
+}
+
+.nav part {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 12%;
+  border: solid 1px #BAC7D3;
+  text-align: center;
+}
+
+a {
+  color: #377D64;
+}
+
+.top {
+  grid-area: banner;
+}
+
+.cards{
+  grid-area: cards;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards article {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 30%;
+}
+
+.cards stories {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 30px;
+  margin-left:50px;
+  width: 30%;
+  border: solid 1px #ccc;
+  border-radius: 3px;
+  box-shadow: 3px 3px 6px #ccc;
+  background-color: #fff;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #5F5C94;
+}
+
+p, {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h4 {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+left-image {
+  float: left;
+  padding: 15px;
+}
+
+right-image{
+  float: right;
+  padding: 15px;
+}
+
+monkey-image {
+  padding-top: 250px;
+}
+author-feature {
+text-align: center;
+padding: 20px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+
+edgar-pic {
+  float: left;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+edgars-books {
+font-family: "Fresca", sans-serif;
+text-align: center;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
