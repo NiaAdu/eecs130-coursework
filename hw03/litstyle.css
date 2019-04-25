@@ -1,0 +1,151 @@
+body{
+  background: #D1D8E7;
+}
+
+h1, h3, h4 {
+  font-family: 'Lato', sans-serif;
+}
+
+p{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container-index {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4;
+  grid-template-areas:
+        "navigation"
+        "heading"
+        "slideshow"
+        "pages";
+}
+
+.nav {
+  grid-area: navigation;
+  background: #fff0a5;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.nav part {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 12%;
+  border: solid 1px #fffeb6;
+  text-align: center;
+}
+
+.heading {
+  grid-area: heading;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.heading h1, p {
+  text-align: center;
+}
+
+.heading hr {
+  width:100%;
+}
+
+.slideshow {
+  grid-area: slideshow;
+}
+
+.cards{
+  grid-area: pages;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  text-align: center;
+}
+
+.cards article {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 30%;
+}
+
+.cards img {
+  height: 350px;
+  width: 300px;
+}
+
+.cardss{
+  grid-area: pages;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  text-align: center;
+}
+.cardss stories {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 40%;
+  border: solid 3px #9AC4C2;
+  margin: 1px;
+}
+
+.cardss img {
+  float: left;
+  height: 350px;
+  width: 300px;
+  padding-right: 5px;
+}
+
+
+@media (max-width: 1024px) {
+   .container-index {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 4;
+      grid-template-areas:
+      "navigation"
+      "heading"
+      "slideshow"
+      "pages";
+
+      min-height: 100vh;
+   }
+   .cards article {
+       box-sizing: border-box;
+       padding: 10px;
+       width: 50%;
+     }
+   .cardss img {
+       float: none;
+       height: 350px;
+       width: 300px;
+       padding-right: 5px;
+     }
+
+}
+
+@media (max-width: 480px) {
+   .container-index {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+      "navigation"
+      "heading"
+      "slideshow"
+      "pages";
+
+      min-height: 100vh;
+
+   }
+   .cards article {
+       box-sizing: border-box;
+       padding: 10px;
+       width: 100%;
+     }
+   .nav {
+     display:none;}
+  .cardss stories {
+    width: 100%; }
+}
