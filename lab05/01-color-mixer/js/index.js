@@ -22,7 +22,7 @@ const updateColor = (ev) => {
     } else if (blueElement.value === 'ON' && yellowElement.value === 'ON') {
             document.body.style.backgroundColor = 'green';
     } else if (redElement.value === 'ON') {
-        document.body.style.backgroundColor = 'red';
+        document.body.style.backgroundColor = '#f00';
     } else if (yellowElement.value === 'ON') {
         document.body.style.backgroundColor = 'yellow';
     } else if (blueElement.value === 'ON') {
@@ -31,7 +31,7 @@ const updateColor = (ev) => {
          else {
         document.body.style.backgroundColor = 'white';
     }
-    
+
 
 };
 
