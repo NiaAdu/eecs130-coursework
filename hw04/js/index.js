@@ -1,4 +1,5 @@
-let activeImage= document.querySelector('.image');
+//let activeImage= document.querySelector('.image');
+let activeImageElement = null;
 
 const showPhoto = (e) => {
 
@@ -8,9 +9,11 @@ const showPhoto = (e) => {
     const imgURL = clickedElement.style.backgroundImage;
     console.log(imgURL);
 
-    activeImage= e.target;
-    activeImage.className='preview_box active';
+    activeImageElement= e.target;
+    //activeImage.className='preview_box active';
+    document.querySelector('.preview_box').className= 'preview_box active';
     document.querySelector('.featured_image').style.backgroundImage= e.target.style.backgroundImage;
+    document.querySelector('body').style.overflow= 'hidden';
 
 
 
@@ -39,11 +42,12 @@ const showPhoto = (e) => {
 //    from the “.preview_box” element.
 // b. Attach your newly created “close” function to the onclick
 //    event handler of the close button (in the upper right-hand corner).
-const closePicture  = () => {
-activeImage.className='preview_box'
-};
+const closePicture  = (e) => {
 
+  document.querySelector('.preview_box.active').className= 'preview_box';
+};
 document.querySelector('.close').onclick= closePicture;
+
 
 
 
@@ -57,8 +61,14 @@ document.querySelector('.close').onclick= closePicture;
 //    the “.featured_image” element (so that clicking anywhere on the
 //    image will advance it to the next one) — for convenience.
 
-const nextPicture = () => {
-  activeImage = activeImage.parentElement.nextElementSibling.firstElementChild
+const nextPicture = (e) => {
+  if (!activeImageElement.parentElement.nextElementSibling) {
+        activeImageElement=document.querySelector('.image');
+  }
+  else {
+        activeImageElement = activeImageElement.parentElement.nextElementSibling.firstElementChild;
+    }
+  document.querySelector('.featured_image').style.backgroundImage = activeImageElement.style.backgroundImage;
 };
 document.querySelector('.next').onclick= nextPicture;
 document.querySelector('.featured_image').onclick= nextPicture;
@@ -69,7 +79,14 @@ document.querySelector('.featured_image').onclick= nextPicture;
 //    in the list.
 // b. Attach your newly created “previous” function to the onclick
 //    event handler of the “.prev” button (in the upper right-hand corner).
-const prevPicture = () => {
-  activeImage = activeImage.parentElement.previousElementSibling.firstElementChild
+const prevPicture = (e) => {
+  if (!activeImageElement.parentElement.previousElementSibling) {
+      const numImages = document.querySelectorAll('.image').length;
+      activeImageElement= document.querySelectorAll('.image')[numImages - 1];
+  }
+  else {
+  activeImageElement = activeImageElement.parentElement.previousElementSibling.firstElementChild;
+  }
+  document.querySelector('.featured_image').style.backgroundImage = activeImageElement.style.backgroundImage;
 };
-document.querySelector('.prev').onclick= nextPicture;
+document.querySelector('.prev').onclick= prevPicture;
