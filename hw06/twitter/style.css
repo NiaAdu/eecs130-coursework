@@ -1,0 +1,37 @@
+#output {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px;
+    border-bottom: solid 1px #CCC;
+    border-right: solid 1px #CCC;
+    align-items: center;
+    justify-content: center;
+}
+.tweet-detail {
+    display: flex;
+    box-sizing: border-box;
+    border: solid 1px #CCC;
+    margin: auto;
+    height: 150px;
+    padding: 10px;
+    background-color:#FFF;
+    width: 300px;
+    overflow-wrap: break-word;
+
+}
+
+img {
+    height: 100%;
+    margin: auto;
+}
+.tweet-detail {
+    width: 80%;
+}
+
+iframe {
+  height: 50%;
+}
+
+p {
+  display: inline-block;
+}
