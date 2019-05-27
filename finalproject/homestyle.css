@@ -1,0 +1,60 @@
+.container {
+   display: grid;
+   grid-template-columns: .7fr .3fr;
+   grid-template-rows: 1fr .6fr .4fr;
+   grid-template-areas:
+      "a b"
+      "c c"
+      "d d";
+
+   min-height: 100vh;
+}
+
+.enter {
+  grid-area: a;
+  background-color: #590004;
+}
+
+.button {
+  background-color: #FFBDB7;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+
+.enterpic {
+  grid-area: b;
+}
+
+.enterpic img {
+  width: 700px;
+  height: 900px;
+
+}
+
+.carousel {
+  grid-area: c;
+  background-color: #100007;
+}
+
+.other {
+  grid-area: d;
+  background-color: #100007;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  box-sizing: border-box;
+  background-color: #f5f3f5;
+  color: #100007;
+  width: 47%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
