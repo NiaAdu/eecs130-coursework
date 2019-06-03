@@ -1,0 +1,80 @@
+body {
+  background-color: #100007;
+}
+
+p {
+  color: #f5f3f5;
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h3, h2 {
+  color: #f5f3f5;
+  font-family: 'Work Sans', sans-serif;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.container-video {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: .10fr .3fr 1fr;
+  grid-template-areas:
+     "n"
+     "h"
+     "i";
+
+  min-height: 100vh;
+}
+
+.nav {
+  grid-area: n;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.nav part {
+  box-sizing: border-box;
+  width: 10%;
+  border: solid 1px #f5f3f5;
+  text-align: center;
+}
+
+.nav bigpart {
+  box-sizing: border-box;
+  width: 70%;
+  border: solid 1px #f5f3f5;
+  text-align: left;
+}
+
+.nav bigpart p {
+  margin-left: 20px;
+}
+
+.title {
+  grid-area: h;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.videocards {
+  grid-area: i;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.videocards card {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 40%;
+  background: #ffbdb7;
+  justify-content: center;
+  margin: auto;
+}
+
+.videocards card img {
+  height: 315px;
+  width: 560px;
+}

@@ -1,0 +1,124 @@
+body {
+  background-color: #100007;
+}
+
+p {
+  color: #f5f3f5;
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h3, h2 {
+  color: #f5f3f5;
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.container {
+   display: grid;
+   grid-template-columns: .6fr .4fr;
+   grid-template-rows: 1fr .08fr .6fr .4fr;
+   grid-template-areas:
+      "a b"
+      "e e"
+      "c c"
+      "d d";
+
+   min-height: 100vh;
+}
+
+.enter {
+  grid-area: a;
+  background-color: #590004;
+  text-align: center;
+}
+.enter img {
+  justify-content: center;
+  margin: auto;
+  display: block;
+}
+
+.enter button {
+  display: block;
+  margin: auto;
+}
+
+.enterpic {
+  grid-area: b;
+}
+
+.enterpic img {
+  width: 130%;
+  height: 100vh;
+  position: -10px;
+}
+
+.button {
+  background-color: #FFBDB7;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#nav {
+  grid-area: e;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 10px;
+}
+
+#nav part {
+  box-sizing: border-box;
+  width: 10%;
+  border: solid 1px #f5f3f5;
+  text-align: center;
+}
+
+#nav bigpart {
+  box-sizing: border-box;
+  width: 70%;
+  border: solid 1px #f5f3f5;
+  text-align: left;
+}
+
+#nav bigpart p {
+  margin-left: 20px;
+}
+
+
+.carousel {
+  grid-area: c;
+  background-color: #100007;
+}
+
+.other {
+  grid-area: d;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.other card {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 40%;
+  background: #ffbdb7;
+  justify-content: center;
+  margin: auto;
+}
+
+.other card img {
+  height: 315px;
+  width: 560px;
+}
