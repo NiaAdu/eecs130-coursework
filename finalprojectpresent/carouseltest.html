@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>My Now Amazing Webpage</title>
+  <link rel="stylesheet" href="carouselstyle.css">
+
+  </head>
+  <body>
+    <div class="siema">
+      <div><img src = "F-7.jpg"></div>
+      <div><img src = "P-shallow 3.jpg"></div>
+      <div><img src = "Adurogbola_FFeature_1.jpg"></div>
+      <div><img src = "IMG_3947.jpg"></div>
+    </div>
+
+
+    <script src="siema.min.js"></script>
+    <script>
+    const mySiema = new Siema({
+      duration: 250,
+      loop: true,
+      });
+
+// listen for keydown event
+setInterval(() => mySiema.next(), 5000)
+    </script>
+  </body>
+</html>
