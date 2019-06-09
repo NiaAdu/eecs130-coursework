@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Nia Adurogbola Portfolio</title>
+  <link rel="stylesheet" href="homestyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400&display=swap" rel="stylesheet">
+  </head>
+
+<body>
+  <div class = "container">
+    <section class = "enter">
+      <h1> <i>Nia Adurogbola</i> </h1> <br>
+      <h2>Photography. Videography</h2>
+      <button class="button">ENTER</button>
+      </section>
+    <section class = "enterpic">
+      <img src = "nia.JPG" alt="Nia Adurogbola">
+      </section>
+    <section id = "nav">
+        <bigpart><a href= "homepage.html"><p>Home</p></a></bigpart>
+        <part><p>Photo</p></part>
+        <part><a href="videopage.html"><p>Video</p></a></part>
+        <part><a href="aboutme.html"><p>About Me</p></a></part>
+      </section>
+    <section class = "carouselheader">
+      <h2>My Recent Work</h2>
+    </section>
+    <section class = "carousel">
+      <div class="siema">
+        <div><a href="https://niaadurogbola.myportfolio.com/hector-duartes-studio" target = "new">
+          <img src = "hector.JPG" alt="Mural Artist Hector Duarte"></a>
+          <a href="https://niaadurogbola.myportfolio.com/hector-duartes-studio" target = "new">
+            <p><i>The Studio of Hector Duarte (2018)</i></p></a></div>
+        <div><a href="https://niaadurogbola.myportfolio.com/still-life" target = "new">
+            <img src = "hk.JPG" alt="Food stall in Hong Kong"></a>
+              <a href ="https://niaadurogbola.myportfolio.com/still-life" target ="new">
+                <p><i>Still Life (2017-present)</i></p></a></div>
+        <div><a href = "https://niaadurogbola.myportfolio.com/portraits" target= "new">
+          <img src = "erin.JPG" alt="Portrait of a smiling girl"></a>
+          <a href = "https://niaadurogbola.myportfolio.com/portraits" target= "new">
+            <p><i>2019 Portraits</i></p></a></div>
+        <div><a href = "https://niaadurogbola.myportfolio.com/final-photojournalism" target= "new">
+          <img src = "skateboard.jpg" alt="Skateboards stacked against a wall"></a>
+          <a href = "https://niaadurogbola.myportfolio.com/final-photojournalism" target= "new">
+            <p><i>Ariel Reyes of Fargo Skateboarding (2018)</i></p></a></div>
+
+
+      </div>
+    </section>
+    <section class="otherheader">
+      <h2>Other Work and Resources</h2>
+    </section>
+    <section class = "other">
+      <card>
+        <a href = "videopage.html"><img src = "thumbnail.PNG" alt="Rollerskater in silhoutte"></a>
+        <a href = "videopage.html"><h2> Videos </h2></a>
+        <p>My work in videography<br><a href = "videopage.html">Click Here</a></p>
+      </card>
+      <card>
+        <a href="https://docs.google.com/document/d/1KRvUVcv7xqumehXHASB9SfVWqHpmbxT5b53E1k3swac/edit?usp=sharing" target="new"><img src = "resume1.jpg" alt="Picture of Resume"></a>
+        <a href="https://docs.google.com/document/d/1KRvUVcv7xqumehXHASB9SfVWqHpmbxT5b53E1k3swac/edit?usp=sharing" target="new"><h2>My Resume</h2></a>
+        <p> For prospective employers <br> <a href=
+        "https://docs.google.com/document/d/1KRvUVcv7xqumehXHASB9SfVWqHpmbxT5b53E1k3swac/edit?usp=sharing" target="new">
+        Click here to view my resume</a>
+        </p>
+      </card>
+    </section>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+    <script src="siema.min.js"></script>
+    <section class ="bumper">
+    </section>
+  </div>
+    <script>
+    const mySiema = new Siema({
+      duration: 250,
+      loop: true,
+      });
+
+// listen for keydown event
+setInterval(() => mySiema.next(), 5000)
+    </script>
+  </body>
+</html>

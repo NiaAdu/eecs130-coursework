@@ -1,0 +1,108 @@
+body {
+  background-color: #100007;
+}
+
+p {
+  color: #f5f3f5;
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h3, h2, h4 {
+  color: #f5f3f5;
+  font-family: 'Work Sans', sans-serif;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.container {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr .5 1fr;
+   grid-template-areas:
+      "n n"
+      "a a"
+      "b b"
+      "c d"
+      "m m";
+
+   min-height: 100vh;
+}
+
+.nav {
+  grid-area: n;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.nav part {
+  box-sizing: border-box;
+  width: 10%;
+  border: solid 1px #f5f3f5;
+  text-align: center;
+  height: 40%;
+}
+
+.nav bigpart {
+  box-sizing: border-box;
+  width: 70%;
+  border: solid 1px #f5f3f5;
+  text-align: left;
+  height: 40%;
+}
+
+.nav bigpart p {
+  margin-left: 20px;
+}
+
+.about {
+  grid-area: a;
+  justify-content: center;
+  text-align: center;
+}
+
+.about img {
+  width: 500px;
+  height: 350px;
+}
+
+
+
+.moreabout {
+  grid-area: b;
+  text-align: center;
+}
+
+.spotifyfeed {
+  grid-area: c;
+}
+
+.spotifyfeed h4{
+  text-align: center;
+}
+
+.twitterfeed {
+  grid-area: d;
+  justify-content: center;
+}
+
+.twitterfeed h4 {
+  text-align: center;
+}
+
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.twitter-timeline {
+  display: block !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bumper {
+  grid-area: m;
+}
